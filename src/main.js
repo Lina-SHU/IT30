@@ -30,7 +30,7 @@ app.use(PrimeVue, {
       button: {
         root: {
           class:
-            'p-2 rounded'
+            'p-2 rounded-xl'
         },
         label: {
           class: 'text-xl'

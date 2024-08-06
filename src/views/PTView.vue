@@ -1,4 +1,19 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+
+const panelPt = ref({
+    hooks: {
+        onMounted: () => {
+            //panel mounted
+            console.log('onMounted!')
+        },
+        onUnmounted: () => {
+            //panel unmounted
+            console.log('onUnMounted!')
+        }
+    }
+});
+</script>
 
 <template>
   <main class="p-6">
@@ -59,7 +74,7 @@
     </Panel>
 
     <div class="mt-3">
-        <Button label="Home" icon="pi pi-home" class="me-3"/>
+        <Button label="Home" icon="pi pi-home" class="me-3" :pt="panelPt" />
         <Button label="Check" icon="pi pi-check" severity="info" />
     </div>
   </main>
