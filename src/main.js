@@ -25,6 +25,17 @@ app.use(PrimeVue, {
         order: 'tailwind-base, primevue, tailwind-utilities'
       }
     }
+  },
+  pt: {
+      button: {
+        root: {
+          class:
+            'p-2 rounded'
+        },
+        label: {
+          class: 'text-xl'
+        }
+      }
   }
 })
 

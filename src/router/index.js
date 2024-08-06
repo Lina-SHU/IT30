@@ -13,6 +13,11 @@ const router = createRouter({
       path: '/theme',
       name: 'theme',
       component: () => import('../views/ThemeView.vue')
+    },
+    {
+      path: '/pt',
+      name: 'pt',
+      component: () => import('../views/PTView.vue')
     }
   ]
 })
