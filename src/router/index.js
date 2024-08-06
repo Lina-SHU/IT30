@@ -18,6 +18,11 @@ const router = createRouter({
       path: '/pt',
       name: 'pt',
       component: () => import('../views/PTView.vue')
+    },
+    {
+      path: '/icon',
+      name: 'icon',
+      component: () => import('../views/IconView.vue')
     }
   ]
 })
