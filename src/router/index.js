@@ -37,6 +37,11 @@ const router = createRouter({
       component: () => import('../views/SelectView.vue')
     },
     {
+      path: '/selectbutton',
+      name: 'selectbutton',
+      component: () => import('../views/SelectButtonView.vue')
+    },
+    {
       path: '/accordion',
       name: 'accordion',
       component: () => import('../views/AccordionView.vue'),
