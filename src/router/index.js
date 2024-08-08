@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import A1View from '../views/A1View.vue'
+import A2View from '../views/A2View.vue'
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -42,12 +44,12 @@ const router = createRouter({
         {
           path: 'page1',
           name: 'page1',
-          component: () => import('../views/A1View.vue')
+          component: A1View
         },
         {
           path: 'page2',
           name: 'page2',
-          component: () => import('../views/A2View.vue')
+          component: A2View
         }
       ]
     },
