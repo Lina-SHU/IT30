@@ -50,6 +50,15 @@ const router = createRouter({
           component: () => import('../views/A2View.vue')
         }
       ]
+    },
+    {
+        // 未對應的路由重新導向到首頁
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        redirect: {
+            name: 'home',
+            params: {}
+        }
     }
   ]
 })
