@@ -7,6 +7,8 @@ import { PrimeVueResolver } from '@primevue/auto-import-resolver'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // eslint-disable-next-line no-undef
+  base: process.env.NODE_ENV === 'production' ? '/IT30/' : '/',
   plugins: [
     vue(),
     Components({
