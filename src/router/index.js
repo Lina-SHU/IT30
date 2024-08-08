@@ -33,6 +33,23 @@ const router = createRouter({
       path: '/select',
       name: 'select',
       component: () => import('../views/SelectView.vue')
+    },
+    {
+      path: '/accordion',
+      name: 'accordion',
+      component: () => import('../views/AccordionView.vue'),
+      children: [
+        {
+          path: 'page1',
+          name: 'page1',
+          component: () => import('../views/A1View.vue')
+        },
+        {
+          path: 'page2',
+          name: 'page2',
+          component: () => import('../views/A2View.vue')
+        }
+      ]
     }
   ]
 })
