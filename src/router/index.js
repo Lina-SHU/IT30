@@ -42,6 +42,11 @@ const router = createRouter({
       component: () => import('../views/SelectButtonView.vue')
     },
     {
+      path: '/toast',
+      name: 'toast',
+      component: () => import('../views/ToastView.vue')
+    },
+    {
       path: '/accordion',
       name: 'accordion',
       component: () => import('../views/AccordionView.vue'),

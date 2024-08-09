@@ -8,6 +8,7 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 import PrimeVue from 'primevue/config'
+import ToastService from 'primevue/toastservice';
 import Aura from '@primevue/themes/aura'
 import zhTWLocale from '@/locale/zh-TW.json'
 
@@ -49,14 +50,13 @@ app.use(PrimeVue, {
       button: {
         root: {
           class:
-            'p-2 rounded-xl'
-        },
-        label: {
-          class: 'text-xl'
+            'rounded-xl'
         }
       }
   }
 })
+
+app.use(ToastService);
 
 app.use(createPinia())
 app.use(router)
