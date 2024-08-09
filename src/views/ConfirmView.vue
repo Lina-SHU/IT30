@@ -7,7 +7,7 @@ const confirm1 = () => {
     confirm.require({
         message: '確認是否刪除此筆資料？',
         header: '刪除',
-        icon: 'pi pi-trash',
+        icon: 'pi pi-exclamation-triangle',
         rejectProps: {
             label: '取消',
             severity: 'secondary',
