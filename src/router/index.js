@@ -47,6 +47,11 @@ const router = createRouter({
       component: () => import('../views/ToastView.vue')
     },
     {
+      path: '/confirm',
+      name: 'confirm',
+      component: () => import('../views/ConfirmView.vue')
+    },
+    {
       path: '/accordion',
       name: 'accordion',
       component: () => import('../views/AccordionView.vue'),
