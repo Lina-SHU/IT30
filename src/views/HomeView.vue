@@ -14,7 +14,7 @@ const date = ref(null)
 const checked = ref(false)
 const toggleColorScheme = () => {
   const element = document.querySelector('html')
-  element.classList.toggle('dark')
+  element.classList.toggle('my-dark-style')
 }
 
 // 改變主題

@@ -36,11 +36,11 @@ const app = createApp(App)
 
 app.use(PrimeVue, {
   ripple: true,
-  locale: zhTWLocale['zh-TW'],
+  locale: zhTWLocale['zh-TW'],  
   theme: {
     preset: Aura,
     options: {
-      darkModeSelector: '.dark',
+      darkModeSelector: '.my-dark-style',
       cssLayer: {
         name: 'primevue',
         order: 'tailwind-base, primevue, tailwind-utilities'
