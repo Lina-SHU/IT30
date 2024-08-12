@@ -5,10 +5,13 @@ import { RouterView } from 'vue-router'
 <template>
   <Toast group="group1" />
   <Toast group="group2" />
-  <ConfirmDialog :pt="{
+  <Toast />
+  <ConfirmDialog
+    :pt="{
       root: {
-        class: 'w-1/3'
+        class: 'w-80'
       }
-  }"></ConfirmDialog>
+    }"
+  ></ConfirmDialog>
   <RouterView />
 </template>
