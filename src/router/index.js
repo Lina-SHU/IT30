@@ -52,6 +52,11 @@ const router = createRouter({
       component: () => import('../views/ConfirmView.vue')
     },
     {
+      path: '/datatable',
+      name: 'datatable',
+      component: () => import('../views/DatatableView.vue')
+    },
+    {
       path: '/accordion',
       name: 'accordion',
       component: () => import('../views/AccordionView.vue'),
@@ -69,13 +74,13 @@ const router = createRouter({
       ]
     },
     {
-        // 未對應的路由重新導向到首頁
-        path: '/:pathMatch(.*)*',
-        name: 'NotFound',
-        redirect: {
-            name: 'home',
-            params: {}
-        }
+      // 未對應的路由重新導向到首頁
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      redirect: {
+        name: 'home',
+        params: {}
+      }
     }
   ]
 })
