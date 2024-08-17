@@ -24,7 +24,7 @@ const columns = [
 
 <template>
   <main class="p-6">
-    <DataTable :value="products" tableStyle="min-width: 50rem">
+    <DataTable :value="products" tableStyle="min-width: 50rem" class="mb-3">
       <Column
         v-for="col of columns"
         :key="col.field"
@@ -32,5 +32,31 @@ const columns = [
         :header="col.header"
       ></Column>
     </DataTable>
+
+    <DataTable
+      :value="products"
+      removableSort
+      sortField="quantity"
+      :sortOrder="1"
+      tableStyle="min-width: 50rem"
+    >
+      <Column header="代碼" field="code" sortable></Column>
+      <Column header="名稱" field="name" sortable></Column>
+      <Column header="種類" field="category" sortable></Column>
+      <Column header="數量" field="quantity" :sortable="true">
+        <template #body="slotProps"> {{ slotProps.data.quantity }} 瓶 </template>
+      </Column>
+    </DataTable>
+
+    <div class="mb-6">
+      <DataTable :value="products" removableSort sortMode="multiple" tableStyle="min-width: 50rem">
+        <Column header="代碼" field="code" sortable></Column>
+        <Column header="名稱" field="name" sortable></Column>
+        <Column header="種類" field="category" sortable></Column>
+        <Column header="數量" field="quantity" :sortable="true">
+          <template #body="slotProps"> {{ slotProps.data.quantity }} 瓶 </template>
+        </Column>
+      </DataTable>
+    </div>
   </main>
 </template>
