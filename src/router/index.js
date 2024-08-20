@@ -77,6 +77,11 @@ const router = createRouter({
       component: () => import('../views/DialogView.vue')
     },
     {
+      path: '/editor',
+      name: 'editor',
+      component: () => import('../views/EditorView.vue')
+    },
+    {
       path: '/accordion',
       name: 'accordion',
       component: () => import('../views/AccordionView.vue'),
