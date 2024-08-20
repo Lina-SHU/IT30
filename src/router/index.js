@@ -57,6 +57,11 @@ const router = createRouter({
       component: () => import('../views/DatatableView.vue')
     },
     {
+      path: '/datatable2',
+      name: 'datatable2',
+      component: () => import('../views/Datatable2View.vue')
+    },
+    {
       path: '/upload',
       name: 'upload',
       component: () => import('../views/UploadView.vue')
