@@ -67,12 +67,9 @@ const onCustomUpload = ($event) => {
     </div>
     <div>
       <FileUpload
-        name="demo[]"
-        url="/api/upload"
         @uploader="onCustomUpload($event)"
         :customUpload="true"
-        accept="image/*"
-        :maxFileSize="1000000"
+        :accept="'.csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel'"
       >
         <template #empty>
           <span>可拖曳檔案到此處</span>
