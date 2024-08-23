@@ -1,7 +1,5 @@
 /* eslint-disable vue/no-reserved-component-names */
 /* eslint-disable vue/multi-word-component-names */
-import './assets/main.scss'
-
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
@@ -12,6 +10,8 @@ import ToastService from 'primevue/toastservice'
 import ConfirmationService from 'primevue/confirmationservice'
 import Aura from '@primevue/themes/aura'
 import zhTWLocale from '@/locale/zh-TW.json'
+
+import './assets/main.scss'
 
 import { Field, Form, ErrorMessage, defineRule, configure } from 'vee-validate'
 // 引入 VeeValidate 的 i18n 功能
@@ -44,13 +44,6 @@ app.use(PrimeVue, {
       cssLayer: {
         name: 'primevue',
         order: 'tailwind-base, primevue, tailwind-utilities'
-      }
-    }
-  },
-  pt: {
-    button: {
-      root: {
-        class: 'rounded-lg'
       }
     }
   }
