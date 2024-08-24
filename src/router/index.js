@@ -87,6 +87,11 @@ const router = createRouter({
       component: () => import('../views/EditorView.vue')
     },
     {
+      path: '/media',
+      name: 'media',
+      component: () => import('../views/MediaView.vue')
+    },
+    {
       path: '/accordion',
       name: 'accordion',
       component: () => import('../views/AccordionView.vue'),
