@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+const value = ref(null)
 
 const filter = ref(0)
 const filterValues = ref([100, 100, 0])
@@ -46,6 +47,32 @@ const downloadImg = async () => {
 
 <template>
   <main class="p-6">
+    <div class="mb-6">
+      <InputText v-model.number="value" class="mb-6" />
+      <Slider v-model="value" class="w-56" />
+    </div>
+    <div class="mb-6">
+      <InputText v-model.number="value" class="mb-6" />
+      <Slider v-model="value" :step="25" class="w-56" />
+    </div>
+    <div class="mb-6">
+      <div class="flex flex-col items-center">
+        <img
+          alt="user header"
+          class="w-full md:w-80 rounded mb-6"
+          src="https://images.unsplash.com/photo-1723984834599-5357b87f727c?q=80&w=1858&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          :style="filterStyle"
+        />
+        <SelectButton
+          v-model="filter"
+          :options="filterOptions"
+          optionLabel="label"
+          optionValue="value"
+          class="mb-4"
+        />
+        <Slider v-model="filterValues[filter]" class="w-56" :min="0" :max="200" />
+      </div>
+    </div>
     <div class="card flex justify-center">
       <div class="flex flex-col items-center">
         <div class="mb-3">
