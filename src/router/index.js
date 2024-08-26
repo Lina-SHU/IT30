@@ -92,6 +92,11 @@ const router = createRouter({
       component: () => import('../views/MediaView.vue')
     },
     {
+      path: '/slider',
+      name: 'slider',
+      component: () => import('../views/SliderView.vue')
+    },
+    {
       path: '/accordion',
       name: 'accordion',
       component: () => import('../views/AccordionView.vue'),
