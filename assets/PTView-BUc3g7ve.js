@@ -1,4 +1,4 @@
-import{B as _,U as g,h as b,R as B,s as k,j as w,o as l,c as u,a as s,k as d,n as P,m as a,l as h,w as c,p as q,b as m,d as i,q as C,v as $,T as I,t as x,r as L}from"./index-CB1Sao8h.js";import{s as A}from"./index-Cd1-d95g.js";import{s as D}from"./index-xpiUSFfi.js";var S=function(o){var t=o.dt;return`
+import{B as _,U as g,h as b,R as B,s as k,j as w,o as l,c as u,a as s,k as d,n as P,m as a,l as h,w as c,p as q,b as m,d as i,q as C,v as $,T as I,t as x,r as L}from"./index-ZhVUXljB.js";import{s as A}from"./index-zE5KEclg.js";import{s as D}from"./index-CBw027Pj.js";var S=function(o){var t=o.dt;return`
 .p-panel {
     border: 1px solid `.concat(t("panel.border.color"),`;
     border-radius: `).concat(t("panel.border.radius"),`;
