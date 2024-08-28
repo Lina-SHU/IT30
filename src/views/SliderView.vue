@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed } from 'vue'
 const value = ref(null)
 
 const filter = ref(0)
@@ -18,12 +18,6 @@ const filterStyle = computed(() => {
 const imageRef = ref(null)
 const imageSrc = ref(null)
 const canvasImage = ref(null)
-let cropper = null
-onMounted(() => {})
-
-onBeforeUnmount(() => {
-  cropper.destroy()
-})
 
 const onCustomUpload = ($event) => {
   const file = $event.files[0]
