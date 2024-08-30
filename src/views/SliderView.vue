@@ -25,6 +25,13 @@ const onCustomUpload = ($event) => {
 }
 
 const downloadImg = async () => {
+  const imgWidth = imageRef.value.clientWidth;
+  const imgHeight = imageRef.value.clientHeight;
+
+  // 動態設置 canvas 的寬高
+  canvasImage.value.width = imgWidth;
+  canvasImage.value.height = imgHeight;
+
   const ctx = canvasImage.value.getContext('2d')
   ctx.filter = filterStyle.value.filter
   ctx.drawImage(imageRef.value, 0, 0, imageRef.value.clientWidth, imageRef.value.clientHeight)
@@ -32,7 +39,7 @@ const downloadImg = async () => {
 
   const link = document.createElement('a')
   link.href = dt
-  link.download = 'downloadImg'
+  link.download = 'downloadImg.jpg';
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)
@@ -83,7 +90,7 @@ const downloadImg = async () => {
             <Button label="下載圖片" severity="info" @click="downloadImg" class="ms-5" />
           </div>
           <img v-if="imageSrc" ref="imageRef" :src="imageSrc" alt="image" :style="filterStyle" />
-          <canvas ref="canvasImage" class="hidden" width="1000" height="1000"></canvas>
+          <canvas ref="canvasImage" class="hidden"></canvas>
         </div>
         <SelectButton
           v-model="filter"
