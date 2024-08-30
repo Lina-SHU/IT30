@@ -14,4 +14,5 @@ import { RouterView } from 'vue-router'
     }"
   ></ConfirmDialog>
   <RouterView />
+  <ScrollTop />
 </template>

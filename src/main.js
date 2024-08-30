@@ -8,6 +8,7 @@ import router from './router'
 import PrimeVue from 'primevue/config'
 import ToastService from 'primevue/toastservice'
 import ConfirmationService from 'primevue/confirmationservice'
+import AnimateOnScroll from 'primevue/animateonscroll';
 import Aura from '@primevue/themes/aura'
 import zhTWLocale from '@/locale/zh-TW.json'
 
@@ -51,6 +52,7 @@ app.use(PrimeVue, {
 
 app.use(ToastService)
 app.use(ConfirmationService)
+app.directive('animateonscroll', AnimateOnScroll);
 
 app.use(createPinia())
 app.use(router)
